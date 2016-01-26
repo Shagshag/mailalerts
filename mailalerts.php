@@ -288,6 +288,7 @@ class MailAlerts extends Module
 			{
 				foreach ($customized_datas[$product['product_id']][$product['product_attribute_id']][$order->id_address_delivery] as $customization)
 				{
+					$customization_text .= $this->l('Quantity:').' '.$customization['quantity'].'<br />';
 					if (isset($customization['datas'][Product::CUSTOMIZE_TEXTFIELD]))
 						foreach ($customization['datas'][Product::CUSTOMIZE_TEXTFIELD] as $text)
 							$customization_text .= $text['name'].': '.$text['value'].'<br />';
